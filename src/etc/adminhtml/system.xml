@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2018 Rubic. All rights reserved.
+    See LICENSE.txt for license details.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="clean_checkout">
+            <group id="general">
+                <field id="force_luma_checkout" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Force Luma Checkout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Forces the Luma theme to be loaded for checkout pages, instead of the currently configured one. This may solve some incompatibility issues with custom themes.]]></comment>
+                </field>
+                <field id="footer_content" translate="label comment" sortOrder="50" type="editor" showInStore="1" showInDefault="1" >
+                    <label>Footer Content</label>
+                    <frontend_model>Rubic\CleanCheckoutTheme\Block\Adminhtml\Editor</frontend_model>
+                    <comment><![CDATA[You can edit this field to add content to the bottom right of your checkout. This is useful for displaying things such as supported payment methods.]]></comment>
+                </field>
+            </group>
+            <group id="colors" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Colors</label>
+                <field id="checkout_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Checkout Background Color</label>
+                    <frontend_class>colorpicker-text</frontend_class>
+                </field>
+                <field id="checkout_border" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Checkout Border Color</label>
+                    <frontend_class>colorpicker-text</frontend_class>
+                </field>
+                <field id="body_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Body Background Color</label>
+                    <frontend_class>colorpicker-text</frontend_class>
+                </field>
+                <field id="custom_css" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom CSS</label>
+                </field>
+            </group>
+            <group id="back_to_store" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Back to Store</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Adds a Go Back to Store link to the checkout.]]></comment>
+                </field>
+                <field id="label" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Label</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
