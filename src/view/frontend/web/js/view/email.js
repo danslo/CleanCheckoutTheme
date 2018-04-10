@@ -11,7 +11,7 @@ define([
     'Magento_Customer/js/customer-data',
     'Magento_Customer/js/model/customer',
     'mage/translate',
-    'Rubic_CleanCheckout/js/bindings/transitions'
+    'Rubic_CleanCheckoutTheme/js/bindings/transitions'
 ], function ($, ko, Component, _, stepNavigator, customerData, customer, $t) {
     'use strict';
 
