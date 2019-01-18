@@ -59,7 +59,7 @@ define([
                 return false;
             }
 
-            target.steps.sort(this.sortItems).forEach(function (element) {
+            target.steps().sort(this.sortItems).forEach(function (element) {
                 if (element.code == hashString || element.alias == hashString) { //eslint-disable-line eqeqeq
                     element.navigate(element);
                 } else {
