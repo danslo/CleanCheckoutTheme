@@ -24,7 +24,7 @@ define([
             }
 
             window.location = window.checkoutConfig.checkoutUrl + '#' + code;
-            sortedItems.forEach(function (element) {
+            sortedItems.each(function (element) {
                 element.isVisible(element.code === code);
             });
         };
