@@ -49,7 +49,9 @@ define([
         },
 
         navigateToNextStep: function () {
-            if (this.validateEmail()) {
+            var currentStep = stepNavigator.getActiveItemIndex();
+
+            if (this.validateEmail() && stepNavigator.steps()[currentStep].code == 'email') {
                 stepNavigator.next();
             } else {
                 $(this.loginFormSelector + ' input[name=username]').focus();
