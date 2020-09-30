@@ -3,8 +3,8 @@
     "type": "magento2-module",
     "license": "MIT",
     "require": {
-        "magento/framework": "<=101.0.11",
-        "magento/module-checkout": "<=100.2.11"
+        "magento/framework": ">=102.0.0",
+        "magento/module-checkout": ">=100.3.0"
     },
     "autoload": {
         "files": [
