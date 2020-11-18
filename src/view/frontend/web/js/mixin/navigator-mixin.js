@@ -18,14 +18,14 @@ define([
             if (customer.isLoggedIn() && code === 'email') {
                 return;
             }
-            var sortedItems = target.steps.sort(this.sortItems);
+            var sortedItems = target.steps().sort(this.sortItems);
             if (!this.isProcessed(code)) {
                 return;
             }
 
             window.location = window.checkoutConfig.checkoutUrl + '#' + code;
             sortedItems.forEach(function (element) {
-                element.isVisible(element.code === code);
+                element.isVisible(element.code == code); //eslint-disable-line eqeqeq
             });
         };
 
@@ -50,7 +50,7 @@ define([
                 return false;
             }
 
-            isRequestedStepVisible = target.steps.sort(this.sortItems).some(function (element) {
+            isRequestedStepVisible = target.steps().sort(this.sortItems).some(function (element) {
                 return (element.code == hashString || element.alias == hashString) && element.isVisible(); //eslint-disable-line
             });
 
@@ -59,7 +59,7 @@ define([
                 return false;
             }
 
-            target.steps.sort(this.sortItems).forEach(function (element) {
+            target.steps().sort(this.sortItems).forEach(function (element) {
                 if (element.code == hashString || element.alias == hashString) { //eslint-disable-line eqeqeq
                     element.navigate(element);
                 } else {
