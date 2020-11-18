@@ -25,6 +25,7 @@
                             hasFocus: emailFocused"
                        name="username"
                        data-validate="{required:true, 'validate-email':true}"
+                       autocomplete="off"
                        id="customer-email" />
                 <!-- ko template: 'ui/form/element/helper/tooltip' --><!-- /ko -->
                 <span class="note" data-bind="fadeVisible: isPasswordVisible() == false"><!-- ko i18n: 'You can create an account after checkout.'--><!-- /ko --></span>
@@ -53,12 +54,7 @@
             <!-- ko foreach: getRegion('additional-login-form-fields') -->
             <!-- ko template: getTemplate() --><!-- /ko -->
             <!-- /ko -->
-            <div class="actions-toolbar">
-                <input name="context" type="hidden" value="checkout" />
-                <div class="primary">
-                    <button type="submit" class="action login" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
-                </div>
-            </div>
+
             <div class="secondary">
                 <span class="note" data-bind="i18n: 'You already have an account with us. Sign in or continue as guest.'"></span><br>
                 <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
@@ -66,7 +62,18 @@
                 </a>
             </div>
         </fieldset>
-        <!--Hidden fields -->
+        <!--END Hidden fields -->
+
+        <div class="actions-toolbar">
+            <input name="context" type="hidden" value="checkout" />
+            <div class="secondary register" data-bind="fadeVisible: isRegisterButtonVisible">
+                <button type="submit" class="action register login" data-action="checkout-method-login"><span data-bind="i18n: 'Register'"></span></button>
+            </div>
+            <div class="primary login" data-bind="fadeVisible: isLoginButtonVisible">
+                <button type="submit" class="action primary login" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
+            </div>
+        </div>
+
     </fieldset>
 </form>
 <!-- /ko -->
