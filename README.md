@@ -1,3 +1,3 @@
 # CleanCheckoutTheme
 
-This is fork of [danslo/CleanCheckoutTheme](danslo/CleanCheckoutTheme)
+This is fork of [danslo/CleanCheckoutTheme](https://github.com/danslo/CleanCheckoutTheme)
