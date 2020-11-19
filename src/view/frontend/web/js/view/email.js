@@ -26,7 +26,7 @@ define([
 
         initialize: function () {
             this._super();
-            stepNavigator.registerStep('email', null, $t('Email'), this.isVisible, _.bind(this.navigate, this), 5);
+            stepNavigator.registerStep('email', null, $t('Login'), this.isVisible, _.bind(this.navigate, this), 5);
             return this;
         },
 

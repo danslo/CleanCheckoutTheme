@@ -12,6 +12,9 @@ use Magento\Store\Model\ScopeInterface;
 
 class BackToStore extends Template
 {
+    /**
+     * @deprecared
+     */
     const CONFIG_PATH_BACK_TO_STORE_LABEL = 'clean_checkout/back_to_store/label';
 
     /**
@@ -31,14 +34,20 @@ class BackToStore extends Template
     }
 
     /**
+     * Allow overriding link label from translations
+     * or use legacy values from config if they exist
      * @return string
      */
     public function getBackToStoreLabel()
     {
-        return $this->_scopeConfig->getValue(
+        $configValue = $this->_scopeConfig->getValue(
             self::CONFIG_PATH_BACK_TO_STORE_LABEL,
             ScopeInterface::SCOPE_STORE
         );
+        if ($configValue) {
+            return $configValue;
+        }
+        return __('Back to Store');
     }
 
     /**

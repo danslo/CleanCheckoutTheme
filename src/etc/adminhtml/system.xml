@@ -44,7 +44,8 @@
                     <comment><![CDATA[Adds a Go Back to Store link to the checkout.]]></comment>
                 </field>
                 <field id="label" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Label</label>
+                    <label>Override label</label>
+                    <comment><![CDATA[Default value is "Back to Store" and it is translatable. Maybe this field will be removed in newer version.]]></comment>
                 </field>
             </group>
         </section>

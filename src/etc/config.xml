@@ -17,7 +17,7 @@
             </colors>
             <back_to_store>
                 <enabled>0</enabled>
-                <label>Back to Store</label>
+                <label></label><!-- @deprecared -->
             </back_to_store>
             <cleanup>
                 <disable_company>1</disable_company>

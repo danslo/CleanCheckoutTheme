@@ -5,8 +5,8 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Rubic_CleanCheckoutTheme::css/clean-checkout-m.css" />
-        <css src="Rubic_CleanCheckoutTheme::css/clean-checkout-l.css" media="screen and (min-width: 768px)"/>
+<!--        <css src="Rubic_CleanCheckoutTheme::css/clean-checkout-m.css" />-->
+<!--        <css src="Rubic_CleanCheckoutTheme::css/clean-checkout-l.css" media="screen and (min-width: 768px)"/>-->
         <css src="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url" />
     </head>
     <body>

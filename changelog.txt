@@ -1,0 +1,5 @@
+- fixes for Magento 2.3
+- WIP: added register link
+- renamed first step from e-mail to Login since it is possible to login via social in another module
+- deprecared "Back to Store" field in administratoin and make label translateble
+- started removing old .css styles
