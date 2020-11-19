@@ -7,7 +7,7 @@
     <head>
 <!--        <css src="Rubic_CleanCheckoutTheme::css/clean-checkout-m.css" />-->
 <!--        <css src="Rubic_CleanCheckoutTheme::css/clean-checkout-l.css" media="screen and (min-width: 768px)"/>-->
-        <css src="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url" />
+<!--        <css src="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url" />-->
     </head>
     <body>
         <referenceContainer name="main">
