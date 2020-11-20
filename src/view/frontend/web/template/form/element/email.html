@@ -69,11 +69,14 @@
             <div class="primary register" data-bind="fadeVisible: isRegisterButtonVisible">
                 <button type="submit" class="action primary register"><span data-bind="i18n: 'Register'"></span></button>
             </div>
-            <div class="primary login" data-bind="fadeVisible: isLoginButtonVisible">
+            <div class="primary login" data-bind="fadeVisible: isPasswordVisible">
                 <button type="submit" class="action primary login"><span data-bind="i18n: 'Login'"></span></button>
             </div>
             <div class="primary guest" data-bind="fadeVisible: isGuestButtonVisible">
                 <button type="submit" class="action primary guest" data-bind="click: continueAsGuest"><span data-bind="i18n: 'Continue as Guest'"></span></button>
+            </div>
+            <div class="primary next" data-bind="fadeVisible: isNextButtonVisible">
+                <button type="button" class="action primary next" data-bind="click: nextAction"><span data-bind="i18n: 'Next'"></span></button>
             </div>
         </div>
 
