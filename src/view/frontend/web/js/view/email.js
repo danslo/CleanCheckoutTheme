@@ -46,16 +46,6 @@ define([
                 emailValidationResult = Boolean($(this.loginFormSelector + ' input[name=username]').valid());
             }
             return emailValidationResult;
-        },
-
-        navigateToNextStep: function () {
-            var currentStep = stepNavigator.getActiveItemIndex();
-
-            if (this.validateEmail() && stepNavigator.steps()[currentStep].code == 'email') {
-                stepNavigator.next();
-            } else {
-                $(this.loginFormSelector + ' input[name=username]').focus();
-            }
         }
     });
 });

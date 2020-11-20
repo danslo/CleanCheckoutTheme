@@ -66,11 +66,14 @@
 
         <div class="actions-toolbar">
             <input name="context" type="hidden" value="checkout" />
-            <div class="secondary register" data-bind="fadeVisible: isRegisterButtonVisible">
-                <button type="submit" class="action register login" data-action="checkout-method-login"><span data-bind="i18n: 'Register'"></span></button>
+            <div class="primary register" data-bind="fadeVisible: isRegisterButtonVisible">
+                <button type="submit" class="action primary register"><span data-bind="i18n: 'Register'"></span></button>
             </div>
             <div class="primary login" data-bind="fadeVisible: isLoginButtonVisible">
-                <button type="submit" class="action primary login" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
+                <button type="submit" class="action primary login"><span data-bind="i18n: 'Login'"></span></button>
+            </div>
+            <div class="primary guest" data-bind="fadeVisible: isGuestButtonVisible">
+                <button type="submit" class="action primary guest" data-bind="click: continueAsGuest"><span data-bind="i18n: 'Continue as Guest'"></span></button>
             </div>
         </div>
 
