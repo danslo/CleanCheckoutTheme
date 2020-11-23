@@ -28,7 +28,9 @@
                        autocomplete="off"
                        id="customer-email" />
                 <!-- ko template: 'ui/form/element/helper/tooltip' --><!-- /ko -->
-                <span class="note" data-bind="fadeVisible: isPasswordVisible() == false"><!-- ko i18n: 'You can create an account after checkout.'--><!-- /ko --></span>
+                <span class="note" data-bind="fadeVisible: isPasswordVisible() == false">
+                    <!-- ko i18n: 'Your email address'--><!-- /ko -->
+                </span>
             </div>
         </div>
 
@@ -40,10 +42,6 @@
                 </label>
                 <div class="control">
                     <input class="input-text"
-                           data-bind="
-                                attr: {
-                                    placeholder: $t('optional'),
-                                }"
                            type="password"
                            name="password"
                            id="customer-password"
@@ -56,7 +54,6 @@
             <!-- /ko -->
 
             <div class="secondary">
-                <span class="note" data-bind="i18n: 'You already have an account with us. Sign in or continue as guest.'"></span><br>
                 <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
                     <span data-bind="i18n: 'Forgot Your Password?'"></span>
                 </a>
