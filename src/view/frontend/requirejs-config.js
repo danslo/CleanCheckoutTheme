@@ -16,6 +16,9 @@ var config = {
             },
             'Magento_Checkout/js/view/payment': {
                 'Rubic_CleanCheckoutTheme/js/mixin/payment-mixin': true
+            },
+            'Magento_InventoryInStorePickupFrontend/js/view/store-selector': {
+                'Rubic_CleanCheckoutTheme/js/mixin/store-selector-mixin': true
             }
         }
     }

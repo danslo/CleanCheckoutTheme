@@ -97,6 +97,19 @@
                                                 </item>
                                             </item>
                                         </item>
+                                        <item name="store-pickup" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="store-selector" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="customer-email" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
                                     </item>
                                 </item>
                             </item>
