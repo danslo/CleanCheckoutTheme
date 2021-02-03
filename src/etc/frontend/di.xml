@@ -7,4 +7,7 @@
     <type name="Magento\Theme\Model\View\Design">
         <plugin name="force_luma_checkout" type="Rubic\CleanCheckoutTheme\Plugin\ForceLumaCheckoutPlugin" />
     </type>
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="rubic_theme_modify_checkout_layout" type="Rubic\CleanCheckoutTheme\Plugin\ModifyCheckoutLayoutPlugin" />
+    </type>
 </config>
