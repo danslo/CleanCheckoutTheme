@@ -18,18 +18,27 @@
                 <span data-bind="i18n: 'Email Address'"></span>
             </label>
             <div class="control _with-tooltip">
-                <input class="input-text"
-                       type="email"
-                       data-bind="
-                            textInput: email,
-                            hasFocus: emailFocused"
-                       name="username"
-                       data-validate="{required:true, 'validate-email':true}"
-                       autocomplete="off"
-                       id="customer-email" />
+                <span data-bind="fadeVisible: isEmailInputEnabled() == false">
+                    <span data-bind="html: email" />
+                    <button type="button" class="action" data-bind="click: allowEmailInput">
+                        <span data-bind="i18n: 'Change email'"></span>
+                    </button>
+                </span>
+                <span data-bind="fadeVisible: isEmailInputEnabled() == true">
+                    <input class="input-text"
+                           type="email"
+                           data-bind="
+                                enable: isEmailInputEnabled,
+                                textInput: email"
+                           name="username"
+                           data-validate="{required:true, 'validate-email':true}"
+                           autocomplete="off"
+                           id="customer-email" />
+                </span>
                 <!-- ko template: 'ui/form/element/helper/tooltip' --><!-- /ko -->
-                <span class="note" data-bind="fadeVisible: isPasswordVisible() == false">
-                    <!-- ko i18n: 'Your email address'--><!-- /ko -->
+                <span class="note" data-bind="fadeVisible: isEmailInputEnabled() == true, css: { 'invalid-email': isEmailInvalid }">
+                    <span data-bind="i18n: 'Your email address', fadeVisible: isEmailInvalid() == false"></span>
+                    <span data-bind="i18n: 'Please enter valid email address', fadeVisible: isEmailInvalid() == true"></span>
                 </span>
             </div>
         </div>
