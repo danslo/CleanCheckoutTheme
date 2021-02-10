@@ -1,4 +1,4 @@
-<ul class="opc-progress-bar">
+<ul class="opc-progress-bar" data-bind="css: isCustomerLoggedIn() ? 'customer-with-account' : ''">
     <!-- ko foreach: { data: steps().sort(sortItems), as: 'item' } -->
         <li class="opc-progress-bar-item"
             data-bind="css: item.isVisible() ? '_active' : ($parent.isProcessed(item) ? '_complete' : '')">
