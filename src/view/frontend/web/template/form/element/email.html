@@ -18,12 +18,12 @@
                 <span data-bind="i18n: 'Email Address'"></span>
             </label>
             <div class="control _with-tooltip">
-                <span data-bind="fadeVisible: isEmailInputEnabled() == false">
-                    <span class="email-input-inactive" data-bind="html: email" />
+                <div class="email-input-inactive" data-bind="fadeVisible: isEmailInputEnabled() == false">
+                    <span class="email-text" data-bind="html: email" />
                     <button type="button" class="action change-email" data-bind="click: allowEmailInput">
                         <span data-bind="i18n: 'Change email'"></span>
                     </button>
-                </span>
+                </div>
                 <span data-bind="fadeVisible: isEmailInputEnabled() == true">
                     <input class="input-text"
                            type="email"
