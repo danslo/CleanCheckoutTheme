@@ -10,6 +10,19 @@ define([
     'use strict';
 
     return function (target) {
+
+        target.setHash = function (newHash) {
+            let oldHash = window.location.hash.replace('#', '');
+            if (
+                customer.isLoggedIn()
+                && oldHash == ''
+                && newHash == 'email'
+            ) {
+                newHash = quote.isVirtual() ? 'payment' : 'shipping';
+            }
+            window.location.hash = newHash;
+        };
+
         /**
          * Disallow going back to Email step when we're logged in.
          * Stop jerky animations between steps by removing body animations.
