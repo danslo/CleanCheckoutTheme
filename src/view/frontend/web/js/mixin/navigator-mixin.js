@@ -15,9 +15,11 @@ define([
          * Stop jerky animations between steps by removing body animations.
          */
         target.navigateTo = function (code, scrollToElementId) {
-            if (customer.isLoggedIn() && code === 'email') {
-                return;
-            }
+            // var hashString = window.location.hash.replace('#', '');
+            // if (hashString = '' && customer.isLoggedIn() && code === 'email') {
+            //     target.navigateTo(quote.isVirtual() ? 'payment' : 'shipping');
+            //     return;
+            // }
             var sortedItems = target.steps().sort(this.sortItems);
             if (!this.isProcessed(code)) {
                 return;

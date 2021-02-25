@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 -->
-<!-- ko ifnot: isCustomerLoggedIn() -->
 
 <!-- ko foreach: getRegion('before-login-form') -->
 <!-- ko template: getTemplate() --><!-- /ko -->
@@ -12,6 +11,7 @@
 <form class="form form-login" data-role="email-with-possible-login"
       data-bind="submit:login"
       method="post">
+
     <fieldset id="customer-email-fieldset" class="fieldset" data-bind="blockLoader: isLoading">
         <div class="field required">
             <label class="label" for="customer-email">
@@ -21,9 +21,11 @@
                 <div class="email-input-inactive" data-bind="fadeVisible: isEmailInputEnabled() == false">
                     <span class="email-text" data-bind="html: email" />
                     <button type="button" class="action change-email" data-bind="click: allowEmailInput">
-                        <span data-bind="i18n: 'Change email'"></span>
+                        <span data-bind="i18n: 'Change email', fadeVisible: isCustomerLoggedIn() == false"></span>
+                        <span data-bind="i18n: 'Log out', fadeVisible: isCustomerLoggedIn() == true"></span>
                     </button>
                 </div>
+
                 <span data-bind="fadeVisible: isEmailInputEnabled() == true">
                     <input class="input-text"
                            type="email"
@@ -35,6 +37,7 @@
                            autocomplete="off"
                            id="customer-email" />
                 </span>
+
                 <!-- ko template: 'ui/form/element/helper/tooltip' --><!-- /ko -->
                 <span class="note" data-bind="fadeVisible: isEmailInputEnabled() == true, css: { 'invalid-email': isEmailInvalid }">
                     <span data-bind="i18n: 'Your email address', fadeVisible: isEmailInvalid() == false"></span>
@@ -73,19 +76,18 @@
         <div class="actions-toolbar">
             <input name="context" type="hidden" value="checkout" />
             <div class="primary register" data-bind="fadeVisible: isRegisterButtonVisible">
-                <button type="submit" class="action primary register" data-bind="click: proceedToRegistration"><span data-bind="i18n: 'Register'"></span></button>
+                <button type="submit" class="action primary register" data-bind="enable: isRegisterButtonVisible, click: proceedToRegistration"><span data-bind="i18n: 'Register'"></span></button>
             </div>
             <div class="primary login" data-bind="fadeVisible: isPasswordVisible">
-                <button type="submit" class="action primary login"><span data-bind="i18n: 'Login'"></span></button>
+                <button type="submit" class="action primary login" data-bind="enable: isPasswordVisible"><span data-bind="i18n: 'Login'"></span></button>
             </div>
             <div class="primary guest" data-bind="fadeVisible: isGuestButtonVisible">
-                <button type="submit" class="action primary guest" data-bind="click: continueAsGuest"><span data-bind="i18n: 'Continue as Guest'"></span></button>
+                <button type="submit" class="action primary guest" data-bind="enable: isGuestButtonVisible, click: continueAsGuest"><span data-bind="i18n: 'Continue as Guest'"></span></button>
             </div>
             <div class="primary next" data-bind="fadeVisible: isNextButtonVisible">
-                <button type="button" class="action primary next" data-bind="click: nextAction"><span data-bind="i18n: 'Next'"></span></button>
+                <button type="submit" class="action primary next" data-bind="enable: isNextButtonVisible, click: nextAction"><span data-bind="i18n: 'Next'"></span></button>
             </div>
         </div>
 
     </fieldset>
 </form>
-<!-- /ko -->

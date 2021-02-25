@@ -31,11 +31,11 @@ define([
         },
 
         navigate: function () {
-            if (customer.isLoggedIn()) {
-                this.navigateToNextStep();
-            } else {
+            // if (customer.isLoggedIn()) {
+            //     this.navigateToNextStep();
+            // } else {
                 this.isVisible(true);
-            }
+            // }
         },
 
         validateEmail: function () {
