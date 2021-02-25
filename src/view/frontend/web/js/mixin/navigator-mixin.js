@@ -14,7 +14,11 @@ define([
         target.setHash = function (newHash) {
             let oldHash = window.location.hash.replace('#', '');
             if (
-                customer.isLoggedIn()
+                (
+                    customer.isLoggedIn()
+                    || window.checkoutConfig.quoteData.customer_id
+                    || window.checkoutConfig.isCustomerLoggedIn
+                )
                 && oldHash == ''
                 && newHash == 'email'
             ) {
