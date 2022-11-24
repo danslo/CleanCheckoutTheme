@@ -36,6 +36,10 @@
                            data-validate="{required:true, 'validate-email':true}"
                            autocomplete="off"
                            id="customer-email" />
+                    <button type="button" class="action change-email" data-bind="click: allowEmailInput">
+                        <span data-bind="i18n: 'Change email'"></span>
+                        <span data-bind="i18n: 'Log out', fadeVisible: isCustomerLoggedIn() == true"></span>
+                    </button>
                 </span>
 
                 <!-- ko template: 'ui/form/element/helper/tooltip' --><!-- /ko -->
