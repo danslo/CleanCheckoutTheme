@@ -1,0 +1,10 @@
+<li id="email" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Login'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+
+        <each args="getRegion('login-methods')" render=""></each>
+
+    </div>
+</li>
