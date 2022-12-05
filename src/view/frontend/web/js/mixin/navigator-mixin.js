@@ -37,6 +37,9 @@ define([
             //     target.navigateTo(quote.isVirtual() ? 'payment' : 'shipping');
             //     return;
             // }
+            if (customer.isLoggedIn() && code === 'email') {
+                return;
+            }
             var sortedItems = target.steps().sort(this.sortItems);
             if (!this.isProcessed(code)) {
                 return;
@@ -44,7 +47,7 @@ define([
 
             window.location = window.checkoutConfig.checkoutUrl + '#' + code;
             sortedItems.forEach(function (element) {
-                element.isVisible(element.code === code);
+                element.isVisible(element.code == code); //eslint-disable-line eqeqeq
             });
         };
 

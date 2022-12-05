@@ -2,6 +2,10 @@
     "name": "rubic/magento2-module-clean-checkout-theme",
     "type": "magento2-module",
     "license": "MIT",
+    "require": {
+        "magento/framework": ">=102.0.0",
+        "magento/module-checkout": ">=100.3.0"
+    },
     "autoload": {
         "files": [
             "registration.php"
