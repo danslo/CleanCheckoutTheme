@@ -80,10 +80,10 @@
         <div class="actions-toolbar">
             <input name="context" type="hidden" value="checkout" />
             <div class="primary register" data-bind="fadeVisible: isRegisterButtonVisible">
-                <button type="submit" class="action primary register" data-bind="enable: isRegisterButtonVisible, click: proceedToRegistration"><span data-bind="i18n: 'Register'"></span></button>
+                <button type="button" class="action primary register" data-bind="enable: isRegisterButtonVisible, click: proceedToRegistration"><span data-bind="i18n: 'Register'"></span></button>
             </div>
             <div class="primary login" data-bind="fadeVisible: isPasswordVisible">
-                <button type="submit" class="action primary login" data-bind="enable: isPasswordVisible"><span data-bind="i18n: 'Login'"></span></button>
+                <button type="button" class="action primary login" data-bind="enable: isPasswordVisible"><span data-bind="i18n: 'Login'"></span></button>
             </div>
             <div class="primary guest" data-bind="fadeVisible: isGuestButtonVisible">
                 <button type="submit" class="action primary guest" data-bind="enable: isGuestButtonVisible, click: continueAsGuest"><span data-bind="i18n: 'Continue as Guest'"></span></button>
