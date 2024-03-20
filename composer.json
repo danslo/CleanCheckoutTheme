@@ -1,5 +1,5 @@
 {
-    "name": "rubic/magento2-module-clean-checkout-theme",
+    "name": "digitalni-plan/magento2-module-clean-checkout-theme",
     "type": "magento2-module",
     "license": "MIT",
     "require": {
